@@ -7,18 +7,18 @@ flowchart TD
 
   C --> D{User Action?}
 
-  D -->|Accept Default (Return)| E[Mark Committed, Show Checkmark]
+  D -->|"Accept Default (Return)"| E[Mark Committed, Show Checkmark]
   E --> F[Move to Next Transaction]
 
-  D -->|Select Different Suggestion (Arrow + Return)| E
-  D -->|Override Category (Type Custom)| G[Validate Input]
+  D -->|"Select Different Suggestion (Arrow + Return)"| E
+  D -->|"Override Category (Type Custom)"| G[Validate Input]
   G -->|Valid| E
   G -->|Invalid| H[Show Validation Error] --> C
 
-  D -->|Navigate Backward (Left Arrow / Back Button)| I[Show Previous Transaction]
+  D -->|"Navigate Backward (Left Arrow / Back Button)"| I[Show Previous Transaction]
   I --> C
 
-  D -->|Navigate Forward (Right Arrow / Next Button)| F
+  D -->|"Navigate Forward (Right Arrow / Next Button)"| F
   F --> C
 
   F -->|Last Transaction?| J{Is Last Transaction?}
