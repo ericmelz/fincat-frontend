@@ -1,0 +1,14 @@
+flowchart TD
+  %% Edit Previous Categorization Flow
+
+  A[Start: User Navigates Back to Previous Transaction] --> B[Display Previous Transaction]
+
+  B --> C[User Modifies Category or Override]
+
+  C --> D[Mark Transaction as Committed (Updated)]
+
+  D --> E[Show Updated Checkmark]
+
+  E --> F{User Navigates Forward or Saves Changes?}
+  F -->|Navigate Forward| G[Show Next Transaction]
+  F -->|Save| H[Save Committed Categories]
